@@ -10,21 +10,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(namespace = "http://awesomeware.org/byond/doc")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Datum {
+public class Type {
+	@XmlElement(required = true)
+	private String description;
+	@XmlElement(required = true)
+	private String name;
+	private String parentType;
 	@XmlElementWrapper(name = "variables")
 	@XmlElement(name = "variable")
 	private List<Variable> variables;
-	@XmlElement(required = true)
-	private String type;
-
-	private Datum() {}
 	
-	public String getType() {
-		return type;
+	private Type() {}
+
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getParentType() {
+		return parentType;
+	}
+
+	public void setParentType(String parentType) {
+		this.parentType = parentType;
 	}
 
 	public List<Variable> getVariables() {

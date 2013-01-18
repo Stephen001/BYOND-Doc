@@ -9,12 +9,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Variable {
 	@XmlElement(required = true)
+	private String description;
+	@XmlElement(required = true)
 	private String name;
 	private String type;
 	private String value;
 	
 	public Variable() {}
 
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	public String getName() {
 		return name;
 	}

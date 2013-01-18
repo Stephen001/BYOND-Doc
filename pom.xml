@@ -36,5 +36,21 @@
 	
 	<modules>
 	    <module>byond-doc-model</module>
+	    <module>byond-doc-parser</module>
 	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.awesomeware.byond</groupId>
+				<artifactId>byond-doc-model</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.awesomeware.byond</groupId>
+				<artifactId>byond-doc-parser</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
